@@ -35,3 +35,24 @@ console.log(objetos.sort(function(o1, o2){
 console.log(objetos.sort(function(o1, o2){
     return o1.tamaño - o2.tamaño
 }))
+
+
+// Ejemplo de callback
+
+function calculate(num1, num2, callback) {
+    console.log(callback(num2, num2))
+}
+
+let add = (num1, num2) => {
+    return num1 + num2
+}
+
+let substract = (num1, num2) => {
+    return num1 - num2
+}
+let multiply = (num1, num2) => {
+    return num1 * num2
+}
+
+calculate(5, 5, multiply)
+
